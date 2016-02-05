@@ -1,8 +1,12 @@
 # Defang
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/defang`. To experiment with that code, run `bin/console` for an interactive prompt.
+Makes outputting a potentially dangerous URI less dangerous by defanging it.
 
-TODO: Delete this and the text above, and describe your gem
+```ruby
+URI('http://some.scary.domain.ru').defang
+=> 'hXXp://some.scary.domain[.]ru'
+
+```
 
 ## Installation
 
