@@ -10,7 +10,7 @@ module URI
 
     # replace so to_s uses them
     @scheme = @scheme.gsub 't', 'X'
-    @host = @host.reverse.sub('.', '[.]').reverse
+    @host = @host.reverse.sub('.', '[.]'.reverse).reverse
 
     defanged_uri = to_s
 

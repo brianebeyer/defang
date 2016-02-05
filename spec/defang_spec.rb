@@ -7,10 +7,10 @@ describe URI do
     expect(URI(uri).defang).to eq('hXXp://google[.]com')
 
     uri = 'http://google.co.uk'
-    expect(URI(uri).defang).to eq('hXXp://google[.]co[.]uk')
+    expect(URI(uri).defang).to eq('hXXp://google.co[.]uk')
 
     uri = 'http://google.com.freemoney.fo.ru'
-    expect(URI(uri).defang).to eq('hXXp://google[.]com[.]freemoney[.]fo[.]ru')
+    expect(URI(uri).defang).to eq('hXXp://google.com.freemoney.fo[.]ru')
   end
 
   it 'doesn\'t change the original' do
